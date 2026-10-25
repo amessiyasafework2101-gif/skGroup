@@ -1,6 +1,7 @@
 
 export default function DashboardPage() {
   return (
+<<<<<<< HEAD
     <div className="flex flex-col items-center">
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
 
@@ -123,5 +124,11 @@ export default function DashboardPage() {
 
       </div>
     </div>
+=======
+    <main>
+      <h1>Dashboard</h1>
+      <p>Welcome! You are on the dashboard.</p>
+    </main>
+>>>>>>> d34d41aef3345a30b1738e179604cf272aaf1104
   );
 }

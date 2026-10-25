@@ -1,4 +1,5 @@
 import Link from "next/link";
+<<<<<<< HEAD
 import { User, BriefcaseBusiness } from "lucide-react"
 
 export default function BottomNav() {
@@ -19,5 +20,27 @@ export default function BottomNav() {
         </button>
       </div>
     </div>
+=======
+
+
+export default function BottomNav() {
+  return (
+    <nav className="bottom-nav" aria-label="Mobile navigation">
+      <Link href="/dashboard">
+        <span>⌂</span>
+        <span>Home</span>
+      </Link>
+
+      <Link href="/messages">
+        <span>✉</span>
+        <span>Messages</span>
+      </Link>
+
+      <Link href="/userProfile">
+        <span>♙</span>
+        <span>Profile</span>
+      </Link>
+    </nav>
+>>>>>>> d34d41aef3345a30b1738e179604cf272aaf1104
   );
 }
