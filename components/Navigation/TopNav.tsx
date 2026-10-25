@@ -4,7 +4,6 @@ import Link from "next/link"
 
 export default function TopNav() {
   return (
-<<<<<<< HEAD
     
 
     <div className="navbar bg-base-100 shadow-sm fixed z-10">
@@ -35,12 +34,5 @@ export default function TopNav() {
     />
   </div>
 </div>
-=======
-    <div className="w-full fixed bg-green-400 top-0 l-0 r-0 ">
-      <Link href="/dashboard" className="logo">
-        SK Group
-      </Link>    
-    </div>
->>>>>>> d34d41aef3345a30b1738e179604cf272aaf1104
   );
 }
