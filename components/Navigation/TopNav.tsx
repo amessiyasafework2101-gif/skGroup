@@ -1,8 +1,20 @@
+"use client"
+
+
 import Link from "next/link"
+import { useThemeStore } from "@/stores/theme-store"
+import {Sun, Moon} from "lucide-react"
+import { useState } from "react"
 
 
 
 export default function TopNav() {
+
+
+  const theme = useThemeStore((state)=> state.theme)
+  const toggleTheme = useThemeStore((state)=> state.toggleTheme)
+  const[checked, setChecked]=useState(theme=="light"?true:false)
+
   return (
     
 
@@ -11,27 +23,19 @@ export default function TopNav() {
     
     <a className="btn btn-ghost text-xl">daisyUI</a>
   </div>
-  <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
-      <li><a>Item 1</a></li>
-      <li>
-        <details>
-          <summary>Parent</summary>
-          <ul className="p-2 bg-base-100 w-40 z-1">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </details>
-      </li>
-      <li><a>Item 3</a></li>
-    </ul>
-  </div>
-  <div className="navbar-end">
+  
+  <div className="navbar-end gap-1">
+    <Moon size={20}/>
     <input
+    onClick={() => {
+      toggleTheme()
+      setChecked(checked?false:true)
+    }}
       type="checkbox"
-      checked={true}
+      checked={checked}
       className="toggle border-indigo-600 bg-indigo-500 checked:border-orange-500 checked:bg-orange-400 checked:text-orange-800"
     />
+    <Sun size={20}/>
   </div>
 </div>
   );
