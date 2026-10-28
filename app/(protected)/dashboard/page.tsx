@@ -2,7 +2,7 @@ export const instant = false
 
 export default function DashboardPage() {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center pt-20">
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
 
         <div className="card w-full bg-base-100 shadow-sm shadow-base-300">

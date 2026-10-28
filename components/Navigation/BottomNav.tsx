@@ -10,7 +10,7 @@ export default function BottomNav() {
 
   return (
     <div>
-      <div className="dock dock-md">
+      <div className="dock dock-sm bg-blue-300/0 backdrop-blur-sm">
         <button className={`${pageName=="/dashboard"?"dock-active":""}`}>
           <a href="/dashboard"> 
             <House />
@@ -29,8 +29,8 @@ export default function BottomNav() {
           </a>
         </button>
 
-        <button className={`${pageName=="/withdraw"?"dock-active":""}`}>
-          <a href="/withdraw"> 
+        <button className={`${pageName=="/wallet"?"dock-active":""}`}>
+          <a href="/wallet"> 
             <BriefcaseBusiness />
           </a>
         </button>

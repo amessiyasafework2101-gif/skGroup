@@ -13,7 +13,7 @@ export default function ProtectedLayout({
     <RouteGuard mode="protected">
      <div>
       <TopNav />
-        <div className="pt-20 pb-25">
+        <div className=" pb-25">
        {children}
        </div>
       <BottomNav />
