@@ -32,7 +32,7 @@ export default function TopNav() {
       setChecked(checked?false:true)
     }}
       type="checkbox"
-      checked={checked}
+      defaultChecked={checked}
       className="toggle border-indigo-600 bg-indigo-500 checked:border-orange-500 checked:bg-orange-400 checked:text-orange-800"
     />
     <Sun size={20}/>
