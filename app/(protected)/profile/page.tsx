@@ -53,7 +53,8 @@ export default function Profile() {
 
       
       <div className="flex w-full px-4">
-        <button className="btn btn-outline btn-primary w-full mt-4 rounded-lg">Logout</button>
+        <button onClick={handleLogout}
+          className="btn btn-outline btn-primary w-full mt-4 rounded-lg">Logout</button>
       </div>
 
       <footer className="pb-3 text-center text-xs text-base-content/50">
