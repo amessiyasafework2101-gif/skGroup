@@ -62,7 +62,9 @@ export default function Wallet() {
         </div>
       </div>
 
-
+      <footer className="pb-3 text-center text-xs text-base-content/50">
+        SK Groups © 2026 
+      </footer>
     </div>
   )
 }

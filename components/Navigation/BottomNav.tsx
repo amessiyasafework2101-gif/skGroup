@@ -12,33 +12,33 @@ export default function BottomNav() {
     <div>
       <div className="dock dock-sm bg-blue-300/0 backdrop-blur-sm">
         <button className={`${pageName=="/dashboard"?"dock-active":""}`}>
-          <a href="/dashboard"> 
+          <Link href="/dashboard"> 
             <House />
-          </a>
+          </Link>
         </button>
         
-        <button className={`${pageName=="/invest"?"dock-active":""}`}>
-          <a href="/invest"> 
+        <button className={`${pageName=="/investments"?"dock-active":""}`}>
+          <Link href="/investments"> 
             <CircleDollarSign />
-          </a>
+          </Link>
         </button>
 
         <button className={`${pageName=="/referral"?"dock-active":""}`}>
-          <a href="/referral"> 
+          <Link href="/referral"> 
             <Users />
-          </a>
+          </Link>
         </button>
 
         <button className={`${pageName=="/wallet"?"dock-active":""}`}>
-          <a href="/wallet"> 
+          <Link href="/wallet"> 
             <BriefcaseBusiness />
-          </a>
+          </Link>
         </button>
         
         <button className={`${pageName=="/profile"?"dock-active":""}`}>
-          <a href="/profile"> 
+          <Link href="/profile"> 
            <User />
-          </a>
+          </Link>
         </button>
       </div>
     </div>

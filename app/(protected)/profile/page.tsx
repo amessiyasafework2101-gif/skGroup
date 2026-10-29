@@ -56,6 +56,10 @@ export default function Profile() {
         <button className="btn btn-outline btn-primary w-full mt-4 rounded-lg">Logout</button>
       </div>
 
+      <footer className="pb-3 text-center text-xs text-base-content/50">
+          SK Groups © 2026 
+      </footer>
+
     </div>
   )
 }
