@@ -2,8 +2,20 @@
 
 
 import { CircleUser, ChevronRight } from "lucide-react"
+import { signOut } from "firebase/auth"
+import { auth } from "@/lib/firebase"
 
 export default function Profile() {
+
+  const handleLogout = async() => {
+    try{
+      await signOut(auth)
+    }catch(error){
+      console.error("Logout failed:",error)
+    }
+  }
+
+
   return (
     <div className="flex flex-col w-full pt-16 bg-base-200 h-[100vh] gap-2">
       <div className="flex flex-row gap-4 items-center w-full px-4 py-3 mb-3">
@@ -41,7 +53,7 @@ export default function Profile() {
 
       
       <div className="flex w-full px-4">
-        <button className="btn btn-soft btn-error w-full mt-4">Logout</button>
+        <button className="btn btn-outline btn-primary w-full mt-4 rounded-lg">Logout</button>
       </div>
 
     </div>
