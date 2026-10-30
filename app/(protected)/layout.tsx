@@ -1,8 +1,8 @@
 import RouteGuard from "@/components/RouteGuard";
-
 import TopNav from "@/components/Navigation/TopNav"
-
 import BottomNav from "@/components/Navigation/BottomNav"
+
+
 
 export default function ProtectedLayout({
   children,
@@ -18,7 +18,6 @@ export default function ProtectedLayout({
        </div>
       <BottomNav />
      </div>
-      
     </RouteGuard>
   );
 }

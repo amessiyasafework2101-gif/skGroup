@@ -22,6 +22,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import { auth } from "@/lib/firebase";
+import { saveUserToFirestore } from "@/lib/saveUser";
 
 export default function RegisterPage() {
   const router = useRouter();
@@ -64,6 +65,8 @@ export default function RegisterPage() {
         displayName: name.trim(),
       });
 
+      await saveUserToFirestore(credential.user);
+
       let verificationSent = true;
 
       try {
@@ -92,7 +95,8 @@ export default function RegisterPage() {
     setMessage("");
 
     try {
-      await signInWithPopup(auth, new GoogleAuthProvider());
+      const result =await signInWithPopup(auth, new GoogleAuthProvider());
+      await saveUserToFirestore(result.user);
       router.push("/dashboard");
     } catch (err) {
       setError(getErrorMessage(err));
